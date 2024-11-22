@@ -1,0 +1,14 @@
+.mainPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mainPage div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 180px;
+    height: 220px;
+    text-align: center;
+}
