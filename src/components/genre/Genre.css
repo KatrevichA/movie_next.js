@@ -1,0 +1,12 @@
+.genres {
+display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.genres div {
+    width: 130px;
+    text-align: center;
+    margin: 2px;
+}

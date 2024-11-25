@@ -1,13 +1,23 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './Movie.css';
+import {IMovie} from "@/models/IMovie";
+import PosterPreview from "@/components/poster/PosterPreview";
+import Link from "next/link";
 
+type MyType = {
+    movie:IMovie
+}
 
-const MoviesListCard = () => {
+const MoviesListCard:FC<MyType> = ({movie}) => {
 
 
     return (
         <div>
         {/*    todo contain all movie information*/}
+            <Link href={'movies/'+ movie.id}>
+                <PosterPreview poster={movie.poster_path} name={movie.title}/>
+            </Link>
+
         </div>
 );
 };

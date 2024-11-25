@@ -1,6 +1,9 @@
 
 import {IMovieResponse} from "@/models/IMovieResponse";
 import {IMovie} from "@/models/IMovie";
+import {IMovieIdVideos} from "@/models/IMovieIdVideos";
+import {IGenresResponse} from "@/models/genres/IGenresResponse";
+import {IGenres} from "@/models/genres/IGenres";
 
 /*todo helper base url*/
 export const urls = {
@@ -21,9 +24,36 @@ export const apiMovieDb ={
                 fetch('https://api.themoviedb.org/3/discover/movie?page=' + page, options)
                     .then(value => value.json())
             return movie
+        },
+        getMovieId: async (id:string):Promise<IMovieIdVideos>=>{
+            const movieId = await
+                fetch('https://api.themoviedb.org/3/movie/'+id+'?&append_to_response=videos', options)
+                    .then(value => value.json())
+            return movieId
         }
     },
-
+    genres:{
+        getGenres: async ():Promise<IGenresResponse & {genres: IGenres[]} >=>{
+            const genres = await
+                fetch('https://api.themoviedb.org/3/genre/movie/list', options)
+                .then(value => value.json());
+            return genres
+        },
+        getAllMovieWithGenre: async (with_genres:string,page:string):Promise<IMovieResponse & {movie: IMovie[]}> =>{
+            const list = await
+                fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=${with_genres}&page=${page}`, options)
+                    .then(value => value.json())
+            return list
+        }
+    },
+    search: {
+        searchWithPage: async (query:string, page:string):Promise<IMovieResponse & {movie: IMovie[]}>=> {
+            const result = await
+                fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&page=${page}`, options)
+                    .then(value => value.json())
+            return result
+        }
+    }
 };
 
 

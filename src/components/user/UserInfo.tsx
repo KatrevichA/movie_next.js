@@ -6,7 +6,7 @@ import './UserInfo.css';
 const UserInfo = () => {
     return (
         <div className={'user'}>
-            <Image src={user} alt={`${user}`} height={40} width={40}/>
+            <Image src={user} alt={'user'} height={40} width={40} priority={false}/>
             <h4>John Smith</h4>
         </div>
     );

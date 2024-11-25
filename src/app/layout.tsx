@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header/Header";
+import GenreBadge from "@/components/genre/GenreBadge";
+import React from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,6 +33,8 @@ export default function RootLayout({
       >
 
         <Header/>
+        <GenreBadge/>
+
 
         {children}
       </body>

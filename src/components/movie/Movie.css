@@ -11,4 +11,21 @@
     width: 180px;
     height: 220px;
     text-align: center;
+    border: black solid 1px;
+    border-radius: 15px;
+    margin: 2px;
+}
+
+/*.......................*/
+
+.MovieInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.poster {
+    margin: 20px;
+}
+.about {
+    margin-left: 20px;
 }

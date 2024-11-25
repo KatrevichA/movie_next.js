@@ -2,6 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import {Button} from "@mui/material";
 
 type Props = {
     totalPages: number;
@@ -13,18 +14,26 @@ export default function Pagination({ totalPages }: Props) {
 
     return (
         <section>
-            <Link rel='prev' href={`/movies/?page=${+page > 1 ? +page - 1 : +page}`}>
-                Previous
-            </Link>
+            <Button color="secondary">
+                <Link rel='prev' href={`/movies/?page=${+page > 1 ? +page - 1 : +page}`}>
+                    Previous
+                </Link>
+            </Button>
+
             <p>
-                {page}/{totalPages}
+                <Button variant="contained" color="success">
+                    {page}
+                </Button>
+                <Button variant="contained" color="success">
+                    {totalPages}
+                </Button>
             </p>
-            <Link
-                rel='next'
-                href={`/movies/?page=${+page < totalPages ? +page + 1 : +page}`}
-            >
-                Next
-            </Link>
+            <Button  color="secondary">
+                <Link rel='next' href={`/movies/?page=${+page < totalPages ? +page + 1 : +page}`}>
+                    Next
+                </Link>
+            </Button>
+
         </section>
     );
 }

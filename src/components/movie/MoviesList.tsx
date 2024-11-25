@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import {IMovie} from "@/models/IMovie";
-import PosterPreview from "@/components/poster/PosterPreview";
+import MoviesListCard from "@/components/movie/MoviesListCard";
+
 type MyProps = {
     movies:IMovie[]
 }
@@ -11,7 +12,7 @@ const MoviesList:FC<MyProps> = ({movies}) => {
 
                 {
                     movies && movies.map(value => <div key={value.id}>
-                        <PosterPreview poster={value.poster_path} name={value.title}/>
+                    <MoviesListCard movie={value}/>
                         {/* todo MoviesListCard*/}
                     </div>)
                 }
