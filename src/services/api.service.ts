@@ -5,7 +5,6 @@ import {IMovieIdVideos} from "@/models/IMovieIdVideos";
 import {IGenresResponse} from "@/models/genres/IGenresResponse";
 import {IGenres} from "@/models/genres/IGenres";
 
-/*todo helper base url*/
 export const urls = {
     imageBaseUrl:'https://image.tmdb.org/t/p/w500'
 };
@@ -55,7 +54,3 @@ export const apiMovieDb ={
         }
     }
 };
-
-
-/*todo getMovie*/
-/*todo getGenres (action click - oll films choosing genre ) */

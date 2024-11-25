@@ -13,7 +13,6 @@ const MoviesList:FC<MyProps> = ({movies}) => {
                 {
                     movies && movies.map(value => <div key={value.id}>
                     <MoviesListCard movie={value}/>
-                        {/* todo MoviesListCard*/}
                     </div>)
                 }
 

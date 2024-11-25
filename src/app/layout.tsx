@@ -35,7 +35,6 @@ export default function RootLayout({
         <Header/>
         <GenreBadge/>
 
-
         {children}
       </body>
     </html>

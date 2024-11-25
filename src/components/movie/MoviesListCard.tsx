@@ -13,11 +13,9 @@ const MoviesListCard:FC<MyType> = ({movie}) => {
 
     return (
         <div>
-        {/*    todo contain all movie information*/}
             <Link href={'movies/'+ movie.id}>
                 <PosterPreview poster={movie.poster_path} name={movie.title}/>
             </Link>
-
         </div>
 );
 };

@@ -23,7 +23,6 @@ const MoviesPage:FC<MyProps> = async (searchParams) => {
         <div className={'moviePage'}>
             <Pagination totalPages={totalPages}/>
             <MoviesList movies={movies}/>
-
         </div>
     );
 };

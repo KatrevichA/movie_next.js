@@ -26,7 +26,6 @@ const MovieInfo:FC<MyType> = ({movie}) => {
                 </div>
             </div>
 
-        {/*    todo contains label, description, badges*/}
         </div>
     );
 };

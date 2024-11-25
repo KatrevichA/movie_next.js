@@ -20,6 +20,31 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## By Project Structure
+
+Концепція загального вигляду (вигляд не повинен бути такий же! Ви не верстальники.
+ЦЕ КОНЦЕПЦІЯ розміщення елементів. Якщо зробите так само, то це буде овер круто):
+[https://dribbble.com/shots/6461891-Media-store-idea-Movies]
+
+1) Main actions:
+- getMovies
+2) - getGenres. (Accordingly, when you click on the genre - films of this genre).
+3) Components:
+- Header
+- MoviesList (renders MoviesListCards)
+- MoviesListCard (contain all movie information)
+- PosterPreview (movie image)
+- StarsRating
+- MovieInfo (contains label, description, badges)
+- GenreBadge
+- UserInfo (just hardcoded small circle and name)
+4) Containers:
+- MoviesPage main:
+5) Pagination.
+6) The second (next) page with an extended description of the film (meaning routing).
+   It should open if the user clicked on a card with a movie.
+7) search for movies by title, or clean title. (Іee what exactly the API gives now, because it changes).
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
